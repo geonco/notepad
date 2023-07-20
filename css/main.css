@@ -1,0 +1,156 @@
+body {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.body-bg {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.body-bg .main-bg {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.body-bg .main-bg .main-bg-title {
+  width: 40%;
+  height: 150px;
+  font-size: 80px;
+  font-weight: 600;
+  color: green;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+}
+.body-bg .main-bg .main-bg-login {
+  width: 40%;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  border: 2.5px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.body-bg .main-bg .main-bg-login .btn-bg {
+  width: 100%;
+  height: 50px;
+  margin-top: -60px;
+}
+.body-bg .main-bg .main-bg-login .btn-bg .main-bg-btn {
+  border-radius: 5px;
+  border: 0.5px solid black;
+  background: black;
+  color: white;
+  font-weight: 500;
+  float: right;
+  width: 80px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+.body-bg .main-bg .main-bg-login .main-bg-id {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  background: yellow;
+}
+.body-bg .main-bg .main-bg-login .main-bg-pw {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  background: yellow;
+}
+.body-bg .main-bg .main-bg-login .id-input {
+  border: 2px solid grey;
+  border-radius: 5px;
+  width: 50%;
+}
+.body-bg .main-bg .main-bg-login .id-input:hover {
+  border: 2px dashed green;
+}
+.body-bg .main-bg .main-bg-login .pw-input {
+  border: 2px solid grey;
+  border-radius: 5px;
+  width: 50%;
+}
+.body-bg .main-bg .main-bg-login .pw-input:hover {
+  border: 2px dashed green;
+}
+.body-bg .main-bg .main-bg-login .btn-danger {
+  margin-top: 10px;
+}
+.body-bg .main-bg .main-bg-login a {
+  margin-top: 10px;
+  text-decoration: none;
+}
+.body-bg .black-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  transition: all 1s;
+}
+.body-bg .black-bg .register {
+  width: 300px;
+  height: 420px;
+  background: white;
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 10%;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 1s;
+  visibility: hidden;
+  opacity: 0;
+}
+.body-bg .black-bg .register h4 {
+  font-weight: 900;
+}
+
+@media screen and (max-width: 576px) {
+  .body-bg .main-bg .main-bg-title {
+    height: 80px;
+  }
+  .body-bg .main-bg .main-bg-title p {
+    font-size: 30px;
+  }
+  .body-bg .main-bg .main-bg-login {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .body-bg .main-bg .main-bg-title {
+    height: 120px;
+  }
+  .body-bg .main-bg .main-bg-title p {
+    font-size: 60px;
+  }
+  .body-bg .main-bg .main-bg-login {
+    width: 60%;
+  }
+}/*# sourceMappingURL=main.css.map */

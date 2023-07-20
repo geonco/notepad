@@ -20,18 +20,25 @@ html, body {
         justify-content: center;
         align-items: center;
         .main-bg-title {
-            width: 40%;
+            width: 60%;
             height: 150px;
             font-size: 80px;
             font-weight: 600;
             color: green;
-            text-align: center;
             border-radius: 10px;
             padding: 10px;
             text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .main-bg-title-text {
+                margin: 0;
+            }
         }
         .main-bg-login {
-            width: 40%;
+            width: 50%;
             height: 400px;
             background: white;
             border-radius: 10px;
@@ -53,7 +60,7 @@ html, body {
                     color: white;
                     font-weight: 500;
                     float: right;
-                    width: 80px;
+                    width: 70px;
                     margin-right: 10px;
                     font-size: 14px;
                 }
@@ -134,33 +141,37 @@ html, body {
 }
 
 
-
-@media screen and (max-width: 576px) {
-    .body-bg {
-        .main-bg {
-            .main-bg-title {
-                height: 80px;
-                p {
-                    font-size: 30px;
-                }
-            }
-            .main-bg-login {
-                width: 70%;
-            }
-        }
-    }
-}
 @media screen and (max-width: 768px) {
     .body-bg {
         .main-bg {
             .main-bg-title {
                 height: 120px;
-                p {
+                .main-bg-title-text {
                     font-size: 60px;
                 }
             }
             .main-bg-login {
                 width: 60%;
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .body-bg {
+        .main-bg {
+            .main-bg-title {
+                height: 100px;
+                .main-bg-title-text {
+                    font-size: 45px;
+                }
+            }
+            .main-bg-login {
+                width: 80%;
+                .btn-bg {
+                    .main-bg-btn {
+                        margin-right: 5px;
+                    }
+                }
             }
         }
     }

@@ -77,7 +77,7 @@ $('.regi').click(function () {
             return 0;
         }
     }
-    // local이 비어있지 않고 && id, pw 정규식 true이고 && id, pw가 둘 중에 하나라도 다를 때
+    // local이 비어있지 않고 && id, pw 정규식 true이고 && id, pw가 둘 중에 하나라도 없을 때
     else {
         if (/^[a-z|A-Z]+$/.test($('.regi-id').val()) == true && /^(?=.*[0-9])(?=.*[a-zA-Z])[a-zA-Z0-9]+$/.test($('.regi-pw').val()) == true && ((JSON.parse(localStorage.getItem('id')).includes($('.regi-id').val()) == false) || (JSON.parse(localStorage.getItem('pw')).includes($('.regi-pw').val()) == false))) {
 
@@ -128,6 +128,12 @@ function logIn(e) {
 
         // 아이디나 비번 둘 중 하나 이상 틀렸을 때
         if (id.includes($('.id-input').val()) == false || pw.includes($('.pw-input').val()) == false) {
+            alert('다시 입력하세요.');
+            e.preventDefault(); // 폼 전송 금지
+        }
+
+        // 아이디 비번 둘 다 있는데 index 번호가 다를 때
+        else if (id.indexOf($('.id-input').val()) != pw.indexOf($('.pw-input').val())){
             alert('다시 입력하세요.');
             e.preventDefault(); // 폼 전송 금지
         }
